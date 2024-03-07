@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Ticket célébration JCI</title>  
+    <title>Ticket célébration JCI</title> 
+    <script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css"></script> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">  
     <link rel="stylesheet" type="text/css" href="./style_home.css">
-    
 </head>
 <body>
 
@@ -15,7 +17,7 @@
     <div class="card align-self-center border-success">
         <div class="card-header">
             <h3 class="card-title text-center">Célébration des 35 ans de la JCI</h3>
-            <p>Veuillez vous inscrire pour obtenir votre ticket</p>
+            <p>Veuillez vous inscrire pour obtenir un ticket</p>
         </div>
         <div class="card-body">
             <form class="" method="post" action="qrcode.php">
@@ -32,7 +34,7 @@
                     <label >Téléphone</label>
                     <input type="tel" name="qrphone" id="qrphone" class="form-control" data-parsley-pattern="[0-9]+" required>
                 </div>
-                <div>
+                <div class="d-grid gap-2 col-8 mx-auto">
                 <input type="submit" name="sbt-btn" value="Générer votre ticket" class="btn btn-success mt-3">
                 </div>
             </form>
@@ -46,6 +48,4 @@
     </script>
  </body>  
 </html>  
-
-
 

@@ -35,7 +35,7 @@ if ($result->num_rows > 0) {
     $backgroundHeight = imagesy($backgroundImage);
 
     // Obtenir les dimensions de l'image du code QR
-    $qrCodeWidth = imagesx($qrCodeImage);
+    $qrCodeWidth = imagesx($qrCodeImage)*1.09;
     $qrCodeHeight = imagesy($qrCodeImage);
 
     // Coordonnées pour placer le code QR au centre de l'image de fond 
@@ -70,35 +70,34 @@ $connection->close();
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-<div class="container w-50 mt-5">
-<div class="card align-self-center border-success" >
-  <div class="card-body">
+<div class=" col-md-12">
+<div class="card mb-3" style="width: 90%; margin: 0 auto;">
+  <div class="card-body" style="width: 450px;">
         <h2 class="card-title">Ticket n° : JCI-035-000<?php echo $ticketData['id']; ?></h2>
         <p class="card-text"><strong>Téléphone:</strong> <?php echo $ticketData['qrtelephone']; ?></p>
         <p class="card-text"><strong>Participant:</strong> <?php echo $ticketData['qrtext']; ?></p>
-        <h3 class="card-text" style="color:orange">Veuillez télécharger votre ticket Merci!!!!</h3>
-    
+        <h6 class="card-text" style="color:red">Veuillez télécharger votre ticket Merci !!!</h6>
   </div>
-  <img src="<?php echo $outputImage; ?>" class="card-img-bottom" alt="Qr code du ticket" width="400" height="200">
+  <img src="<?php echo $outputImage; ?>" class="img-fluid rounded" alt="Qr code du ticket" width="450" height="200" style="border: 1px solid black">
 </div>
    
-<div class="card col-8 mx-auto " style="border:none">
-     <a href="<?php echo $outputImage; ?>" class="btn btn-outline-success mt-4 mx-auto w-50" download>Télécharger</a>
-
-     <script>
-    function redirectToHomepage() {
-        window.location.href = 'index.php'; 
-        return false; 
-    }
-</script>
-
-     </div>
+ <div class="d-grid gap-2 col-4 mx-auto text-center"  style="border:none">
+     <a href="<?php echo $outputImage; ?>" id="downloadLink" class="btn btn-outline-light mt-2" download onclick="redirectToHomepage()">Télécharger</a>
+     
+     <script>// Rediriger vers la page d'index après 3 secondes
+      function redirectToHomepage() { 
+        setTimeout(function() {
+            window.location.href = 'index.php';
+        }, 3000); // 3000 millisecondes (3 secondes)
+      }
+     </script>
+ </div>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
      <footer class="text-center">
-     <p class="align-self-center mt-5">Copyright © 2024 - Athanase Kouassi - Tous droits reservés</p>
+     <p class="align-self-center mt-3">Copyright © 2024 - Athanase Kouassi - Tous droits reservés</p>
      </footer>
      
 </body>

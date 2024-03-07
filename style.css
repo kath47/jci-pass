@@ -1,40 +1,10 @@
 
-      body {
-        font-family: Arial, sans-serif;
-    }
-    .ticket {
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 20px;
-        width: 500px;
-        margin: auto;
-        margin-top: 50px;
-    }
-    .qrcode-container {
-        width: auto;
-        text-align: center;
-        margin-top: 20px;
-        font-family: Arial, sans-serif;
-        font-size: 18px;
-    }
-
-
-    .img-fluid{
-        display: flex;
-        width: auto;
-        
-    }
-
-    img{
-        display: flex;
-        width: auto;
-    }
 
 
 
 
     :root {
-        font-size: 20px;
+        font-size: 18px;
       }
       
       *,
@@ -48,7 +18,7 @@
       }
       
       p:not(:last-child) {
-        margin-bottom: 1.5em;
+        margin-bottom: 1.2em;
       }
       
       body {
@@ -59,17 +29,17 @@
         justify-content: center;
         
         min-height: 100vh;
-        padding: 30px;
+        padding: 35px;
         margin: 0;
         
         color: #224;
         background:
-          url(https://source.unsplash.com/E8Ufcyxz514/2400x1823)
+          url(phpqrcode/fond.jpeg)
           center / cover no-repeat fixed;
       }
       
       .card {
-        max-width: 300px;
+        max-width: 350px;
         min-height: 200px;
         display: flex;
         flex-direction: column;
@@ -77,7 +47,7 @@
       
         max-width: 500px;
         height: 300px;
-        padding: 35px;
+        padding: 30px;
       
         border: 1px solid rgba(255, 255, 255, .25);
         border-radius: 20px;
@@ -91,4 +61,5 @@
         font-size: 0.65em;
         color: #446;
       }
+      
       

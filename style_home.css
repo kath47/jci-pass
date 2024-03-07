@@ -3,6 +3,9 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background:
+          url(phpqrcode/fond.jpeg)
+          center / cover no-repeat fixed;
 }
 
 form{
